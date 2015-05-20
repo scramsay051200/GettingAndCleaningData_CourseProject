@@ -10,13 +10,9 @@ Before running this script, the working directory should be set to the folder:
     UCI HAR Dataset
     
 This folder, and its contents, can be found in an unzipped version of the data
-set downloaded from this URL location:
+set downloaded from this URL location: [](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-    [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-
-A description of this data set can be found from this URL location:
-
-    [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+A description of this data set can be found from this URL location: [](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 As a general outline, this script performs the following steps:
 
