@@ -1,2 +1,74 @@
-# GettingAndCleaningData_CourseProject
-Code Book for the "Getting and Cleaning Data" course project.
+
+# Getting and Cleaning Data (Coursera)
+## Course Project CodeBook
+
+| Variable                             | Description                                    |
+|--------------------------------------|------------------------------------------------|
+| SubjectId                            |                                                |
+| ActivityName                         |                                                |
+| MeanOf:[tBodyAcc-mean()-X]           |                                                |
+| MeanOf:[tBodyAcc-mean()-Y]           |                                                |
+| MeanOf:[tBodyAcc-mean()-Z]           |                                                |
+| MeanOf:[tBodyAcc-std()-X]            |                                                |
+| MeanOf:[tBodyAcc-std()-Y]            |                                                |
+| MeanOf:[tBodyAcc-std()-Z]            |                                                |
+| MeanOf:[tGravityAcc-mean()-X]        |                                                |
+| MeanOf:[tGravityAcc-mean()-Y]        |                                                |
+| MeanOf:[tGravityAcc-mean()-Z]        |                                                |
+| MeanOf:[tGravityAcc-std()-X]         |                                                |
+| MeanOf:[tGravityAcc-std()-Y]         |                                                |
+| MeanOf:[tGravityAcc-std()-Z]         |                                                |
+| MeanOf:[tBodyAccJerk-mean()-X]       |                                                |
+| MeanOf:[tBodyAccJerk-mean()-Y]       |                                                |
+| MeanOf:[tBodyAccJerk-mean()-Z]       |                                                |
+| MeanOf:[tBodyAccJerk-std()-X]        |                                                |
+| MeanOf:[tBodyAccJerk-std()-Y]        |                                                |
+| MeanOf:[tBodyAccJerk-std()-Z]        |                                                |
+| MeanOf:[tBodyGyro-mean()-X]          |                                                |
+| MeanOf:[tBodyGyro-mean()-Y]          |                                                |
+| MeanOf:[tBodyGyro-mean()-Z]          |                                                |
+| MeanOf:[tBodyGyro-std()-X]           |                                                |
+| MeanOf:[tBodyGyro-std()-Y]           |                                                |
+| MeanOf:[tBodyGyro-std()-Z]           |                                                |
+| MeanOf:[tBodyGyroJerk-mean()-X]      |                                                |
+| MeanOf:[tBodyGyroJerk-mean()-Y]      |                                                |
+| MeanOf:[tBodyGyroJerk-mean()-Z]      |                                                |
+| MeanOf:[tBodyGyroJerk-std()-X]       |                                                |
+| MeanOf:[tBodyGyroJerk-std()-Y]       |                                                |
+| MeanOf:[tBodyGyroJerk-std()-Z]       |                                                |
+| MeanOf:[tBodyAccMag-mean()]          |                                                |
+| MeanOf:[tBodyAccMag-std()]           |                                                |
+| MeanOf:[tGravityAccMag-mean()]       |                                                |
+| MeanOf:[tGravityAccMag-std()]        |                                                |
+| MeanOf:[tBodyAccJerkMag-mean()]      |                                                |
+| MeanOf:[tBodyAccJerkMag-std()]       |                                                |
+| MeanOf:[tBodyGyroMag-mean()]         |                                                |
+| MeanOf:[tBodyGyroMag-std()]          |                                                |
+| MeanOf:[tBodyGyroJerkMag-mean()]     |                                                |
+| MeanOf:[tBodyGyroJerkMag-std()]      |                                                |
+| MeanOf:[fBodyAcc-mean()-X]           |                                                |
+| MeanOf:[fBodyAcc-mean()-Y]           |                                                |
+| MeanOf:[fBodyAcc-mean()-Z]           |                                                |
+| MeanOf:[fBodyAcc-std()-X]            |                                                |
+| MeanOf:[fBodyAcc-std()-Y]            |                                                |
+| MeanOf:[fBodyAcc-std()-Z]            |                                                |
+| MeanOf:[fBodyAccJerk-mean()-X]       |                                                |
+| MeanOf:[fBodyAccJerk-mean()-Y]       |                                                |
+| MeanOf:[fBodyAccJerk-mean()-Z]       |                                                |
+| MeanOf:[fBodyAccJerk-std()-X]        |                                                |
+| MeanOf:[fBodyAccJerk-std()-Y]        |                                                |
+| MeanOf:[fBodyAccJerk-std()-Z]        |                                                |
+| MeanOf:[fBodyGyro-mean()-X]          |                                                |
+| MeanOf:[fBodyGyro-mean()-Y]          |                                                |
+| MeanOf:[fBodyGyro-mean()-Z]          |                                                |
+| MeanOf:[fBodyGyro-std()-X]           |                                                |
+| MeanOf:[fBodyGyro-std()-Y]           |                                                |
+| MeanOf:[fBodyGyro-std()-Z]           |                                                |
+| MeanOf:[fBodyAccMag-mean()]          |                                                |
+| MeanOf:[fBodyAccMag-std()]           |                                                |
+| MeanOf:[fBodyBodyAccJerkMag-mean()]  |                                                |
+| MeanOf:[fBodyBodyAccJerkMag-std()]   |                                                |
+| MeanOf:[fBodyBodyGyroMag-mean()]     |                                                |
+| MeanOf:[fBodyBodyGyroMag-std()]      |                                                |
+| MeanOf:[fBodyBodyGyroJerkMag-mean()] |                                                |
+| MeanOf:[fBodyBodyGyroJerkMag-std()]  |                                                |
