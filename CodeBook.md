@@ -95,6 +95,41 @@ relative to the "UCI HAR Dataset" folder:
     mergedActivityRows <- rbind(testActivityRows, trainActivityRows)
     mergedActivityRows$measurementId <- 1:nrow(mergedActivityRows)
 ```
+* Read the "./test/X_test.txt" and "./train/X_train.txt" files.  These tables
+  identify the features associated with each measurement in the test and train 
+  data sets.  Note: Use the "readr" package, for much faster file i/o.
+  * Subset to only the columns labelled as "mean()" or "std()" of measurements.
+  * Merge the test and train rows together.
+  * Add a measurement-id we'll use to join things later.
+
+  Note: These tables have a column for every row in the "features.txt" file 
+        above.
+```
+    testFeaturesRows <- read_fwf(
+        "./test/X_test.txt", 
+        col_positions = fwf_widths(
+            widths = rep(16,561),
+            col_names=featuresColNames$FeatureColName))
+
+    trainFeaturesRows <- read_fwf(
+        "./train/X_train.txt", 
+        col_positions = fwf_widths(
+            widths = rep(16,561),
+            col_names=featuresColNames$FeatureColName))
+
+    # Subset to only the columns labelled as "mean()" or "std()" of measurements.
+    testFeaturesRows  <- testFeaturesRows[
+        ,grep("(-mean\\(\\)|-std\\(\\))", names(testFeaturesRows))]
+
+    trainFeaturesRows <- trainFeaturesRows[
+        ,grep("(-mean\\(\\)|-std\\(\\))", names(trainFeaturesRows))]
+
+    # Merge the test and train rows together.
+    # Add a measurement-id column we'll use to join things later.
+    mergedFeaturesRows <- rbind(testFeaturesRows, trainFeaturesRows)
+    mergedFeaturesRows$measurementId <- 1:nrow(mergedFeaturesRows)
+```
+
 4. 
 
 | Variable                             | Description                                         |
