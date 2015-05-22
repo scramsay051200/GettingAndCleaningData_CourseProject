@@ -184,73 +184,75 @@ relative to the "UCI HAR Dataset" folder:
     write.table(tidyData, "./TidyData.txt", sep = ",", row.names = FALSE)
 ```
 
-| Variable                             | Description                                         |
-|--------------------------------------|-----------------------------------------------------|
-| SubjectId                            | The id of the subject (person) a record represents. |
-| ActivityName                         | The activity being performed by the subject.        |
-| MeanOf:[tBodyAcc-mean()-X]           |                                                |
-| MeanOf:[tBodyAcc-mean()-Y]           |                                                |
-| MeanOf:[tBodyAcc-mean()-Z]           |                                                |
-| MeanOf:[tBodyAcc-std()-X]            |                                                |
-| MeanOf:[tBodyAcc-std()-Y]            |                                                |
-| MeanOf:[tBodyAcc-std()-Z]            |                                                |
-| MeanOf:[tGravityAcc-mean()-X]        |                                                |
-| MeanOf:[tGravityAcc-mean()-Y]        |                                                |
-| MeanOf:[tGravityAcc-mean()-Z]        |                                                |
-| MeanOf:[tGravityAcc-std()-X]         |                                                |
-| MeanOf:[tGravityAcc-std()-Y]         |                                                |
-| MeanOf:[tGravityAcc-std()-Z]         |                                                |
-| MeanOf:[tBodyAccJerk-mean()-X]       |                                                |
-| MeanOf:[tBodyAccJerk-mean()-Y]       |                                                |
-| MeanOf:[tBodyAccJerk-mean()-Z]       |                                                |
-| MeanOf:[tBodyAccJerk-std()-X]        |                                                |
-| MeanOf:[tBodyAccJerk-std()-Y]        |                                                |
-| MeanOf:[tBodyAccJerk-std()-Z]        |                                                |
-| MeanOf:[tBodyGyro-mean()-X]          |                                                |
-| MeanOf:[tBodyGyro-mean()-Y]          |                                                |
-| MeanOf:[tBodyGyro-mean()-Z]          |                                                |
-| MeanOf:[tBodyGyro-std()-X]           |                                                |
-| MeanOf:[tBodyGyro-std()-Y]           |                                                |
-| MeanOf:[tBodyGyro-std()-Z]           |                                                |
-| MeanOf:[tBodyGyroJerk-mean()-X]      |                                                |
-| MeanOf:[tBodyGyroJerk-mean()-Y]      |                                                |
-| MeanOf:[tBodyGyroJerk-mean()-Z]      |                                                |
-| MeanOf:[tBodyGyroJerk-std()-X]       |                                                |
-| MeanOf:[tBodyGyroJerk-std()-Y]       |                                                |
-| MeanOf:[tBodyGyroJerk-std()-Z]       |                                                |
-| MeanOf:[tBodyAccMag-mean()]          |                                                |
-| MeanOf:[tBodyAccMag-std()]           |                                                |
-| MeanOf:[tGravityAccMag-mean()]       |                                                |
-| MeanOf:[tGravityAccMag-std()]        |                                                |
-| MeanOf:[tBodyAccJerkMag-mean()]      |                                                |
-| MeanOf:[tBodyAccJerkMag-std()]       |                                                |
-| MeanOf:[tBodyGyroMag-mean()]         |                                                |
-| MeanOf:[tBodyGyroMag-std()]          |                                                |
-| MeanOf:[tBodyGyroJerkMag-mean()]     |                                                |
-| MeanOf:[tBodyGyroJerkMag-std()]      |                                                |
-| MeanOf:[fBodyAcc-mean()-X]           |                                                |
-| MeanOf:[fBodyAcc-mean()-Y]           |                                                |
-| MeanOf:[fBodyAcc-mean()-Z]           |                                                |
-| MeanOf:[fBodyAcc-std()-X]            |                                                |
-| MeanOf:[fBodyAcc-std()-Y]            |                                                |
-| MeanOf:[fBodyAcc-std()-Z]            |                                                |
-| MeanOf:[fBodyAccJerk-mean()-X]       |                                                |
-| MeanOf:[fBodyAccJerk-mean()-Y]       |                                                |
-| MeanOf:[fBodyAccJerk-mean()-Z]       |                                                |
-| MeanOf:[fBodyAccJerk-std()-X]        |                                                |
-| MeanOf:[fBodyAccJerk-std()-Y]        |                                                |
-| MeanOf:[fBodyAccJerk-std()-Z]        |                                                |
-| MeanOf:[fBodyGyro-mean()-X]          |                                                |
-| MeanOf:[fBodyGyro-mean()-Y]          |                                                |
-| MeanOf:[fBodyGyro-mean()-Z]          |                                                |
-| MeanOf:[fBodyGyro-std()-X]           |                                                |
-| MeanOf:[fBodyGyro-std()-Y]           |                                                |
-| MeanOf:[fBodyGyro-std()-Z]           |                                                |
-| MeanOf:[fBodyAccMag-mean()]          |                                                |
-| MeanOf:[fBodyAccMag-std()]           |                                                |
-| MeanOf:[fBodyBodyAccJerkMag-mean()]  |                                                |
-| MeanOf:[fBodyBodyAccJerkMag-std()]   |                                                |
-| MeanOf:[fBodyBodyGyroMag-mean()]     |                                                |
-| MeanOf:[fBodyBodyGyroMag-std()]      |                                                |
-| MeanOf:[fBodyBodyGyroJerkMag-mean()] |                                                |
-| MeanOf:[fBodyBodyGyroJerkMag-std()]  |                                                |
+### Description of Tidy Data Set
+
+| Variable                             | Description                                                       |
+|--------------------------------------|-------------------------------------------------------------------|
+| SubjectId                            | The id of the subject (person) a record represents.               |
+| ActivityName                         | The activity being performed by the subject.                      |
+| MeanOf:[tBodyAcc-mean()-X]           | Mean of time domain body X accel means.                           |
+| MeanOf:[tBodyAcc-mean()-Y]           | Mean of time domain body Y accel means.                           |
+| MeanOf:[tBodyAcc-mean()-Z]           | Mean of time domain body Y accel means.                           |
+| MeanOf:[tBodyAcc-std()-X]            | Mean of time domain body X accel standard deviations.             |
+| MeanOf:[tBodyAcc-std()-Y]            | Mean of time domain body Y accel standard deviations.             |
+| MeanOf:[tBodyAcc-std()-Z]            | Mean of time domain body Z accel standard deviations.             |                                               |
+| MeanOf:[tGravityAcc-mean()-X]        | Mean of time domain gravity X accel means.                        |
+| MeanOf:[tGravityAcc-mean()-Y]        | Mean of time domain gravity Y accel means.                        |
+| MeanOf:[tGravityAcc-mean()-Z]        | Mean of time domain gravity Z accel means.                        |
+| MeanOf:[tGravityAcc-std()-X]         | Mean of time domain gravity X accel standard deviations.          |
+| MeanOf:[tGravityAcc-std()-Y]         | Mean of time domain gravity Y accel standard deviations.          |
+| MeanOf:[tGravityAcc-std()-Z]         | Mean of time domain gravity Z accel standard deviations.          |
+| MeanOf:[tBodyAccJerk-mean()-X]       | Mean of time domain body X accel jerk means.                      |
+| MeanOf:[tBodyAccJerk-mean()-Y]       | Mean of time domain body Y accel jerk means.                      |
+| MeanOf:[tBodyAccJerk-mean()-Z]       | Mean of time domain body Z accel jerk means.                      |
+| MeanOf:[tBodyAccJerk-std()-X]        | Mean of time domain body X accel jerk standard deviations.        |
+| MeanOf:[tBodyAccJerk-std()-Y]        | Mean of time domain body Y accel jerk standard deviations.        |
+| MeanOf:[tBodyAccJerk-std()-Z]        | Mean of time domain body Z accel jerk standard deviations.        |
+| MeanOf:[tBodyGyro-mean()-X]          | Mean of time domain body X gyro means.                            |
+| MeanOf:[tBodyGyro-mean()-Y]          | Mean of time domain body Y gyro means.                            |
+| MeanOf:[tBodyGyro-mean()-Z]          | Mean of time domain body Z gyro means.                            |
+| MeanOf:[tBodyGyro-std()-X]           | Mean of time domain body X gyro standard deviations.              |
+| MeanOf:[tBodyGyro-std()-Y]           | Mean of time domain body Y gyro standard deviations.              |
+| MeanOf:[tBodyGyro-std()-Z]           | Mean of time domain body X gyro standard deviations.              |
+| MeanOf:[tBodyGyroJerk-mean()-X]      | Mean of time domain body X gyro jerk means.                       |
+| MeanOf:[tBodyGyroJerk-mean()-Y]      | Mean of time domain body Y gyro jerk means.                       |
+| MeanOf:[tBodyGyroJerk-mean()-Z]      | Mean of time domain body Z gyro jerk means.                       |
+| MeanOf:[tBodyGyroJerk-std()-X]       | Mean of time domain body X gyro jerk standard deviations.         |                                               |
+| MeanOf:[tBodyGyroJerk-std()-Y]       | Mean of time domain body Y gyro jerk standard deviations.         |
+| MeanOf:[tBodyGyroJerk-std()-Z]       | Mean of time domain body Z gyro jerk standard deviations.         |
+| MeanOf:[tBodyAccMag-mean()]          | Mean of time domain body accel magnitude means.                   |
+| MeanOf:[tBodyAccMag-std()]           | Mean of time domain body accel magnitude standard deviations.     |                                               |
+| MeanOf:[tGravityAccMag-mean()]       | Mean of time domain gravity accel magnitude means.                |
+| MeanOf:[tGravityAccMag-std()]        | Mean of time domain gravity accel magnitude standard deviations.  |
+| MeanOf:[tBodyAccJerkMag-mean()]      | Mean of time domain body accel jerk magnitude means.              |
+| MeanOf:[tBodyAccJerkMag-std()]       | Mean of time domain body accel jerk magnitude standard deviations.|
+| MeanOf:[tBodyGyroMag-mean()]         | Mean of time domain body gyro magnitude means.                    |
+| MeanOf:[tBodyGyroMag-std()]          | Mean of time domain body gyro magnitude standard deviations.      |
+| MeanOf:[tBodyGyroJerkMag-mean()]     | Mean of time domain body gyro jerk magnitude means.               |
+| MeanOf:[tBodyGyroJerkMag-std()]      | Mean of time domain body gyro jerk magnitude standard deviations. |
+| MeanOf:[fBodyAcc-mean()-X]           | Mean of fqcy domain body X accel means.                           |
+| MeanOf:[fBodyAcc-mean()-Y]           | Mean of fqcy domain body Y accel means.                           |
+| MeanOf:[fBodyAcc-mean()-Z]           | Mean of fqcy domain body Z accel means.                           |
+| MeanOf:[fBodyAcc-std()-X]            | Mean of fqcy domain body X accel standard deviations.             |
+| MeanOf:[fBodyAcc-std()-Y]            | Mean of fqcy domain body Y accel standard deviations.             |
+| MeanOf:[fBodyAcc-std()-Z]            | Mean of fqcy domain body Z accel standard deviations.             |
+| MeanOf:[fBodyAccJerk-mean()-X]       | Mean of fqcy domain body X jerk means.                            |
+| MeanOf:[fBodyAccJerk-mean()-Y]       | Mean of fqcy domain body Y accel jerk means.                      |
+| MeanOf:[fBodyAccJerk-mean()-Z]       | Mean of fqcy domain body Z accel jerk means.                      |
+| MeanOf:[fBodyAccJerk-std()-X]        | Mean of fqcy domain body X accel jerk standard deviations.        |
+| MeanOf:[fBodyAccJerk-std()-Y]        | Mean of fqcy domain body Y accel jerk standard deviations.        |
+| MeanOf:[fBodyAccJerk-std()-Z]        | Mean of fqcy domain body Z accel jerk standard deviations.        |
+| MeanOf:[fBodyGyro-mean()-X]          | Mean of fqcy domain body X gyro means.                            |
+| MeanOf:[fBodyGyro-mean()-Y]          | Mean of fqcy domain body Y gyro means.                            |
+| MeanOf:[fBodyGyro-mean()-Z]          | Mean of fqcy domain body Z gyro means.                            |
+| MeanOf:[fBodyGyro-std()-X]           | Mean of fqcy domain body X gyro standard deviations.              |
+| MeanOf:[fBodyGyro-std()-Y]           | Mean of fqcy domain body Y gyro standard deviations.              |
+| MeanOf:[fBodyGyro-std()-Z]           | Mean of fqcy domain body Z gyro standard deviations.              |
+| MeanOf:[fBodyAccMag-mean()]          | Mean of fqcy domain body accel magnitude means.                   |
+| MeanOf:[fBodyAccMag-std()]           | Mean of fqcy domain body accel magnitude standard deviations.     |
+| MeanOf:[fBodyBodyAccJerkMag-mean()]  | Mean of fqcy domain body accel jerk magnitude means.              |
+| MeanOf:[fBodyBodyAccJerkMag-std()]   | Mean of fqcy domain body accel jerk magnitude standard deviations.|
+| MeanOf:[fBodyBodyGyroMag-mean()]     | Mean of fqcy domain body gyro magnitude means.                    |
+| MeanOf:[fBodyBodyGyroMag-std()]      | Mean of fqcy domain body gyro magnitude standard deviations.      |
+| MeanOf:[fBodyBodyGyroJerkMag-mean()] | Mean of fqcy domain body gyro jerk magnitude means.               |
+| MeanOf:[fBodyBodyGyroJerkMag-std()]  | Mean of fqcy domain body gyro jerk magnitude standard deviations. |
