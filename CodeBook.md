@@ -36,19 +36,19 @@ relative to the "UCI HAR Dataset" folder:
 ### Transformation of the Inputs
 
 #### 1. Read the "activity_labels.txt" file.  This table helps to map activity-codes
-   to human readable activity names.
+####    to human readable activity names.
 
-   | Variable                             | Description                                         |
-   |--------------------------------------|-----------------------------------------------------|
-   | ActivityId                           | The id of the activity a record represents.         |
-   | ActivityName                         | The human readable activity a record represents.    |
+| Variable                             | Description                                         |
+|--------------------------------------|-----------------------------------------------------|
+| ActivityId                           | The id of the activity a record represents.         |
+| ActivityName                         | The human readable activity a record represents.    |
 
 ```
-   featuresColNames <- read.csv(
-       "./features.txt",
-       header = FALSE,
-       sep = " ",
-       col.names=list("FeatureColId", "FeatureColName"))
+    featuresColNames <- read.csv(
+        "./features.txt",
+        header = FALSE,
+        sep = " ",
+        col.names=list("FeatureColId", "FeatureColName"))
 ```
 
 2. Read the "features.txt" file.  This table contains (most of) the column 
