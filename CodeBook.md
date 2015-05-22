@@ -71,9 +71,9 @@ relative to the "UCI HAR Dataset" folder:
    identify the activity associated with each measurement in the test and train 
    data sets. With these tables:
 
-3.1. Label all of the activities with their textual counterparts.
-3.2. Merge the test and train rows together.
-3.3. Add a measurement-id we'll use to join things later.
+..1. Label all of the activities with their textual counterparts.
+..2. Merge the test and train rows together.
+..3. Add a measurement-id we'll use to join things later.
 
 ```
     testActivityRows <- read.csv(
