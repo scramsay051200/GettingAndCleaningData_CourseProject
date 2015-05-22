@@ -5,7 +5,7 @@
 This file documents the "run_analysis.R" script in this repository, written
 as part of the coursera "Getting And Cleaning Data" final course project.
 
-Before running this script, the working directory should be set to the folder:
+Before running this script, the working directory should be set to this folder:
 
     UCI HAR Dataset
     
@@ -26,16 +26,16 @@ above as inputs (all relative to the "UCI HAR Dataset" folder:
     ./activity_labels.txt
     ./features.txt
     ./test/y_test.txt
-    ./train/y_train.txt
     ./test/subject_test.txt
-    ./train/subject_test.txt
     ./test/X_test.txt
+    ./train/y_train.txt
+    ./train/subject_test.txt
     ./train/X_train.txt
 
 ### Outputs
 
 The "run_analysis.R" script creates the following files as outputs (all
-relatve to the "UCI HAR Dataset" folder:
+relative to the "UCI HAR Dataset" folder:
 
     ./MergedData.txt
     ./TidyData.txt
@@ -60,4 +60,22 @@ As a general outline, "run_analysis.R" script performs the following steps:
    set" with the average of each variable for each activity and each subject.
    It writes this data set to a file called:  TidyData.txt
 
+### Running the Script
 
+The "run_analysis.R" script requires the following two packages:
+
+[readr]http://cran.r-project.org/web/packages/readr/readr.pdf
+[plyr]http://cran.r-project.org/web/packages/plyr/plyr.pdf
+
+To execute this script, simply:
+
+1. Open the file in "RStudio".
+2. Set the working directory to the "UCI HAR Dataset" folder (see above).
+3. Select all lines of the script by double-clicking the mouse.
+4. Press the "Run" button.
+
+After executing the script, the following two new files will also be in the 
+current working directory:
+
+    ./MergedData.txt
+    ./TidyData.txt
