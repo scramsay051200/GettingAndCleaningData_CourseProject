@@ -35,8 +35,8 @@ relative to the "UCI HAR Dataset" folder:
 
 ### Transformation of the Inputs
 
-1. Read the "activity_labels.txt" file.  This table helps to map activity-codes
-   to human readable activity names.
+(1) Read the "activity_labels.txt" file.  This table helps to map activity-codes
+    to human readable activity names.
 
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
@@ -49,8 +49,8 @@ relative to the "UCI HAR Dataset" folder:
         sep = " ",
         col.names=list("ActivityId", "ActivityName"))
 ```
-2. Read the "features.txt" file.  This table contains (most of) the column 
-   names associated with the measurements in our data set.
+(2) Read the "features.txt" file.  This table contains (most of) the column 
+    names associated with the measurements in our data set.
 
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
@@ -63,12 +63,12 @@ relative to the "UCI HAR Dataset" folder:
         sep = " ",
         col.names=list("FeatureColId", "FeatureColName"))
 ```
-3. Read the "./test/y_test.txt" and "./train/y_train.txt" files.  These tables
-   identify the activity associated with each measurement in the test and train 
-   data sets. With these tables:
-  1. Label all of the activities with their textual counterparts.
-  2. Merge the test and train rows together.
-  3. Add a measurement-id we'll use to join things later.
+(3) Read the "./test/y_test.txt" and "./train/y_train.txt" files.  These tables
+    identify the activity associated with each measurement in the test and train 
+    data sets. With these tables:
+    (a) Label all of the activities with their textual counterparts.
+    (b) Merge the test and train rows together.
+    (c) Add a measurement-id we'll use to join things later.
 ```
     testActivityRows <- read.csv(
         "./test/y_test.txt",
