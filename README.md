@@ -1,9 +1,15 @@
 
 # Getting and Cleaning Data (Coursera)
-## Course Project README
+## Course Project README.md
 
 This file documents the "run_analysis.R" script in this repository, written
 as part of the coursera "Getting And Cleaning Data" final course project.
+
+Specifically, this file explains:
+
+1. The inputs to the script.
+2. How to execute the script.
+3. Its resulting outputs.
 
 Before running this script, the working directory should be set to this folder:
 
