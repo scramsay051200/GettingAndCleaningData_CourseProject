@@ -35,8 +35,8 @@ relative to the "UCI HAR Dataset" folder:
 
 ### Transformation of the Inputs
 
-1. **Read the "activity_labels.txt" file.  This table helps to map activity-codes**
-   **to human readable activity names.**
+1. Read the "activity_labels.txt" file.  This table helps to map activity-codes
+   to human readable activity names.
 
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
