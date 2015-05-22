@@ -150,8 +150,38 @@ relative to the "UCI HAR Dataset" folder:
   * Rename certain column names of the tidy data set to reflect their new
     meaning.
   * Write the tidy data set into its own file, for later use.
-
 ```
+    # Create a copy of the merged data set.
+    mergedDataCopy <- mergedData
+
+    # Mark some columns for eventual deletion.
+    colnames(mergedDataCopy)[
+        colnames(mergedDataCopy) == "ActivityName"] <- "tempActName"
+    colnames(mergedDataCopy)[
+        colnames(mergedDataCopy) == "SubjectId"] <- "tempSubjId"
+
+    # Create a tidy data set, rolled up as an average of each variable, for each
+    # activity, and each subject.
+    tidyData <- aggregate(
+        mergedDataCopy,
+        list(ActivityName = mergedDataCopy$tempActName, 
+             SubjectId = mergedDataCopy$tempSubjId),
+        mean)
+
+    # Remove columns we no longer need.
+    tidyData$measurementId <- NULL
+    tidyData$ActivityId <- NULL
+    tidyData$tempSubjId <- NULL
+    tidyData$tempActName <- NULL
+
+    # Rename certain column names of the tidy data set to reflect their new meaning.
+    colnames(tidyData) <- ifelse(
+        colnames(tidyData) == "SubjectId" | colnames(tidyData) == "ActivityName", 
+        colnames(tidyData),
+        paste("MeanOf:[", colnames(tidyData), "]", sep=""))
+
+    # Write the tidy data set into its own file, for later use.
+    write.table(tidyData, "./TidyData.txt", sep = ",", row.names = FALSE)
 ```
 
 | Variable                             | Description                                         |
