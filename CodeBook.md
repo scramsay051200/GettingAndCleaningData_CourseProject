@@ -37,6 +37,7 @@ relative to the "UCI HAR Dataset" folder:
 
 1. Read the "activity_labels.txt" file.  This table helps to map activity-codes
    to human readable activity names.
+
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
 | ActivityId                           | The id of the activity a record represents.         |
@@ -50,6 +51,7 @@ relative to the "UCI HAR Dataset" folder:
 ```
 2. Read the "features.txt" file.  This table contains (most of) the column 
    names associated with the measurements in our data set.
+
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
 | FeatureColId                         | The id of the feature a record represents.          |
@@ -64,9 +66,9 @@ relative to the "UCI HAR Dataset" folder:
 3. Read the "./test/y_test.txt" and "./train/y_train.txt" files.  These tables
    identify the activity associated with each measurement in the test and train 
    data sets. With these tables:
-..1. Label all of the activities with their textual counterparts.
-..2. Merge the test and train rows together.
-..3. Add a measurement-id we'll use to join things later.
+  1. Label all of the activities with their textual counterparts.
+  2. Merge the test and train rows together.
+  3. Add a measurement-id we'll use to join things later.
 ```
     testActivityRows <- read.csv(
         "./test/y_test.txt",
