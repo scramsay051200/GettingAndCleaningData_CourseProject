@@ -44,11 +44,11 @@ relative to the "UCI HAR Dataset" folder:
 | ActivityName                         | The human readable activity a record represents.    |
 
 ```
-    featuresColNames <- read.csv(
-        "./features.txt",
+    activityLabels <- read.csv(
+        "./activity_labels.txt",
         header = FALSE,
         sep = " ",
-        col.names=list("FeatureColId", "FeatureColName"))
+        col.names=list("ActivityId", "ActivityName"))
 ```
 
 2. Read the "features.txt" file.  This table contains (most of) the column 
@@ -59,11 +59,44 @@ relative to the "UCI HAR Dataset" folder:
 | FeatureColId                         | The id of the feature a record represents.          |
 | FeatureColName                       | The human readable feature name a record represents.| 
 
+```
+    featuresColNames <- read.csv(
+        "./features.txt",
+        header = FALSE,
+        sep = " ",
+        col.names=list("FeatureColId", "FeatureColName"))
+```
+
 3. Read the "./test/y_test.txt" and "./train/y_train.txt" files.  These tables
    identify the activity associated with each measurement in the test and train 
-   data sets.  With these tables:
-   
-   a. Label all of the activities with their textual counterparts.
+   data sets. With these tables:
+
+       a. Label all of the activities with their textual counterparts.
+       b. Merge the test and train rows together.
+       c. Add a measurement-id we'll use to join things later.
+
+```
+    testActivityRows <- read.csv(
+        "./test/y_test.txt",
+        header = FALSE,
+        sep = " ",
+        col.names=list("ActivityId"))
+
+    trainActivityRows <- read.csv(
+        "./train/y_train.txt",
+        header = FALSE,
+        sep = " ",
+        col.names=list("ActivityId"))
+
+    # Label all of the activities with their textual counterparts.
+    testActivityRows   <- activityLabels[testActivityRows$ActivityId,]
+    trainActivityRows  <- activityLabels[trainActivityRows$ActivityId,]
+
+    # Merge the test and train rows together.
+    # Add a measurement-id column we'll use to join things later.
+    mergedActivityRows <- rbind(testActivityRows, trainActivityRows)
+    mergedActivityRows$measurementId <- 1:nrow(mergedActivityRows)
+```
 
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
