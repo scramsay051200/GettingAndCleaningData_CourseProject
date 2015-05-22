@@ -69,6 +69,10 @@ relative to the "UCI HAR Dataset" folder:
   * Label all of the activities with their textual counterparts.
   * Merge the test and train rows together.
   * Add a measurement-id we'll use to join things later.
+
+| Variable                             | Description                                         |
+|--------------------------------------|-----------------------------------------------------|
+| ActivityId                           | The id of the activity a record represents.         |
 ```
     testActivityRows <- read.csv(
         "./test/y_test.txt",
@@ -91,11 +95,6 @@ relative to the "UCI HAR Dataset" folder:
     mergedActivityRows <- rbind(testActivityRows, trainActivityRows)
     mergedActivityRows$measurementId <- 1:nrow(mergedActivityRows)
 ```
-
-| Variable                             | Description                                         |
-|--------------------------------------|-----------------------------------------------------|
-| ActivityId                           | The id of the activity a record represents.         |
-
 4. 
 
 | Variable                             | Description                                         |
