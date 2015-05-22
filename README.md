@@ -65,6 +65,7 @@ As a general outline, "run_analysis.R" script performs the following steps:
 The "run_analysis.R" script requires the following two packages:
 
 http://cran.r-project.org/web/packages/readr/readr.pdf
+
 http://cran.r-project.org/web/packages/plyr/plyr.pdf
 
 To execute this script, simply:
