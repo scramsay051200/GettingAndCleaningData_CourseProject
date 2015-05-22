@@ -129,8 +129,30 @@ relative to the "UCI HAR Dataset" folder:
     mergedFeaturesRows <- rbind(testFeaturesRows, trainFeaturesRows)
     mergedFeaturesRows$measurementId <- 1:nrow(mergedFeaturesRows)
 ```
+* Build the merged data set (built from the test and train data sets.
+  * Join subject rows, activity rows, and features rows.
+  * Write the merged data set into its own file, for later use.
+```
+    # Join subject rows, activity rows, and feature rows.
+    mergedData <- join_all(
+        list(mergedSubjectRows, mergedActivityRows, mergedFeaturesRows))
 
-4. 
+    # Write the merged data set into its own file, for later use.
+    write.table(mergedData, "./MergedData.txt", sep = ",", row.names = FALSE)
+```
+* Build a tidy data set, which is an aggregate of the original merged data set,
+  rolled up as an average for each variable, for each activity and each subject.
+  * Create a copy of the merged data set.
+  * Mark some columns for eventual deleting.
+  * Create a tidy data set, rolled up as an average of each variable, for each
+    activity, and each subject.
+  * Remove columns we no longer need.
+  * Rename certain column names of the tidy data set to reflect their new
+    meaning.
+  * Write the tidy data set into its own file, for later use.
+
+```
+```
 
 | Variable                             | Description                                         |
 |--------------------------------------|-----------------------------------------------------|
