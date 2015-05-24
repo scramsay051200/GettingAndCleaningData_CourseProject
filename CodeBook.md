@@ -196,7 +196,8 @@ and activity names (respectivey) associated with each row of data.  The original
 X, Y, and Z acceleration signals from the various accelerometers recorded in the
 test and train data sets are in standard gravity units 'g'.  However, the 
 "Features" worked with in the "Merged.txt" and "TidyData.txt" are normalized and
-bounded within the range of [-1,1].  As a result, they are also unitless.
+bounded within the range of [-1,1].  As a result, they are also unitless.  Below
+is a description for each of the vriables.
 
 ### Description of Tidy Data Set
 
