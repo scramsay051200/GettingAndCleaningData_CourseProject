@@ -27,7 +27,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ### Inputs
 
 The "run_analysis.R" script uses the following files in the data set mentioned
-above as inputs (all relative to the "UCI HAR Dataset" folder:
+above as inputs (all relative to the "UCI HAR Dataset" folder):
 
     ./activity_labels.txt
     ./features.txt
@@ -38,6 +38,9 @@ above as inputs (all relative to the "UCI HAR Dataset" folder:
     ./train/subject_test.txt
     ./train/X_train.txt
 
+**See the "CodeBook.md" in this repository for a detailed explanation of each of
+these input files.**
+
 ### Outputs
 
 The "run_analysis.R" script creates the following files as outputs (all
@@ -45,6 +48,9 @@ relative to the "UCI HAR Dataset" folder:
 
     ./MergedData.txt
     ./TidyData.txt
+
+**See the "CodeBook.md" in this repository for a detailed explanation of each of 
+these output files.**
 
 ### High level Algorithm 
 
