@@ -16,15 +16,15 @@ Specifically, this file explains:
 The "run_analysis.R" script uses the following files in the data set mentioned
 above as inputs (all relative to the "UCI HAR Dataset" folder:
 
-| File Name                 | Description                                                                                    |
-|---------------------------|------------------------------------------------------------------------------------------------|
+| File Name                 | Description                                                                                  |
+|---------------------------|----------------------------------------------------------------------------------------------|
 | activity_labels.txt     | Activiy ID key mapped to textual activity names.                                               |
 | features.txt            | A list of 561 textual features names, recorded with each measurement of data.                  |
 | test/y_test.txt         | 2947 rows, each indicating the Activity ID associated with each measurement of test data.      |
-| test/subject_test.txt   | 2947 rows, each indicating the subject (person) associated with each measurement of test data. |
+| test/subject_test.txt   | 2947 rows, each indicating the subject/person associated with each measurement of test data.   |
 | test/X_test.txt         | 2947 rows, each with 561 features associated with each measurement of test data.               |
-| train/y_train.txt       | 7352 rows, each indicating the Activity ID associated with each measurement of the train data. |
-| train/subject_test.txt  | 7352 rows, each indicating the subject (person) associated with each measurement of train data.|
+| train/y_train.txt       | 7352 rows, each indicating the Activity ID associated with each measurement of train data.     |
+| train/subject_test.txt  | 7352 rows, each indicating the subject/person associated with each measurement of train data.  |
 | train/X_train.txt       | 7352 rows, each with 561 features associated with each measurement of train data.              |
 
 ### Outputs
