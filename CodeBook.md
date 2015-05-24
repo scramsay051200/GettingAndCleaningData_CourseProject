@@ -188,6 +188,16 @@ relative to the "UCI HAR Dataset" folder:
     write.table(tidyData, "./TidyData.txt", sep = ",", row.names = FALSE)
 ```
 
+### Notes on Units of Merged and Tidy Data Sets
+
+The "SubjectId" and "ActivityName" variables in the final "Merged.txt" and 
+"TidyData.txt" data sets are unitless values representing the subjects (people)
+and activity names (respectivey) associated with each row of data.  The original
+X, Y, and Z acceleration signals from the various accelerometers recorded in the
+test and train data sets are in standard gravity units 'g'.  However, the 
+"Features" worked with in the "Merged.txt" and "TidyData.txt" are normalized and
+bounded within the range of [-1,1].  As a result, they are also unitless.
+
 ### Description of Tidy Data Set
 
 | Variable                             | Description                                                       |
